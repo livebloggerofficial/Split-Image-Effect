@@ -1,0 +1,28 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: #111;
+}
+
+.split-image-container {
+  display: flex;
+}
+
+.split-image-container .split-image {
+  width: 320px;
+  height: 427px;
+  background: url("images/car.jpg");
+  background-size: cover;
+  transition: all 400ms ease;
+}
+
+.split-image-container .split-image:nth-child(2) {
+  background-position-x: -320px;
+}
+
+.split-image-container:hover .split-image {
+  margin: 0 24px;
+  transform: scale(1.08) rotateZ(3deg);
+  box-shadow: 0 5px 40px -24px #00ffdd;
+}
